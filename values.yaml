@@ -38,7 +38,7 @@ test-app-api:
     tag: ""
 
   service:
-    type: LoadBalancer
+    type: ClusterIP
     port: 80
 
   ingress:
@@ -66,7 +66,7 @@ test-app-service:
     tag: ""
 
   service:
-    type: LoadBalancer
+    type: ClusterIP
     port: 80
 
   ingress:
