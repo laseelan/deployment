@@ -7,7 +7,7 @@ global:
 test-app-cli:
 
   image:
-    repository: andrewlock/my-test-cli
+    repository: 172.23.64.152:5000/my-test-cli
     pullPolicy: IfNotPresent
     tag: ""
 
@@ -18,7 +18,7 @@ test-app-cli:
 test-app-cli-exec-host:
 
   image:
-    repository: andrewlock/my-test-cli-exec-host
+    repository: 172.23.64.152:5000/my-test-cli-exec-host
     pullPolicy: IfNotPresent
     tag: ""
 
@@ -33,12 +33,12 @@ test-app-api:
     "ASPNETCORE_ENVIRONMENT": "Development"
 
   image:
-    repository: andrewlock/my-test-api
+    repository: 172.23.64.152:5000/my-test-api
     pullPolicy: IfNotPresent
     tag: ""
 
   service:
-    type: ClusterIP
+    type: LoadBalancer
     port: 80
 
   ingress:
@@ -61,12 +61,12 @@ test-app-service:
   replicaCount: 1
 
   image:
-    repository: andrewlock/my-test-service
+    repository: 172.23.64.152:5000/my-test-service
     pullPolicy: IfNotPresent
     tag: ""
 
   service:
-    type: ClusterIP
+    type: LoadBalancer
     port: 80
 
   ingress:
