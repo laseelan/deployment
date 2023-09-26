@@ -42,7 +42,7 @@ test-app-api:
     port: 80
 
   ingress:
-    enabled: true
+    enabled: false
     annotations:
       nginx.ingress.kubernetes.io/rewrite-target: "/"
     hosts:
