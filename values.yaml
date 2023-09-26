@@ -7,7 +7,7 @@ global:
 test-app-cli:
 
   image:
-    repository: 172.23.64.152:5000/my-test-cli
+    repository: laseelan/my-test-cli
     pullPolicy: IfNotPresent
     tag: ""
 
@@ -18,7 +18,7 @@ test-app-cli:
 test-app-cli-exec-host:
 
   image:
-    repository: 172.23.64.152:5000/my-test-cli-exec-host
+    repository: laseelan/my-test-cli-exec-host
     pullPolicy: IfNotPresent
     tag: ""
 
@@ -33,7 +33,7 @@ test-app-api:
     "ASPNETCORE_ENVIRONMENT": "Development"
 
   image:
-    repository: 172.23.64.152:5000/my-test-api
+    repository: laseelan/my-test-api
     pullPolicy: IfNotPresent
     tag: ""
 
@@ -61,7 +61,7 @@ test-app-service:
   replicaCount: 1
 
   image:
-    repository: 172.23.64.152:5000/my-test-service
+    repository: laseelan/my-test-service
     pullPolicy: IfNotPresent
     tag: ""
 
